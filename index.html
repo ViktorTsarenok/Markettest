@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мій Маркетплейс</title>
     <link rel="stylesheet" href="styles.css"> <!-- Підключення CSS -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Ласкаво просимо до Мого Маркетплейсу!</h1>
+        <h1 class="site-title">Ласкаво просимо до Мого Маркетплейсу!</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">Меню</button>
         <nav>
-            <ul>
-                <li><a href="#about">Про нас</a></li>
-                <li><a href="#products">Продукти</a></li>
-                <li><a href="#contact">Контакти</a></li>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="products.html">Продукти</a></li>
+                <li><a href="contact.html">Контакти</a></li>
             </ul>
         </nav>
     </header>
