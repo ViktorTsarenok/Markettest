@@ -8,32 +8,28 @@ body {
     background-color: #f1f1f1; /* Загальний фон сторінки */
 }
 
+.container {
+    display: flex; /* Використання Flexbox для компонування */
+}
+
 .left-panel {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 2cm; /* Ширина лівої панелі */
-    height: 100%; /* Висота 100% */
     background-color: #6A08BA; /* Фіолетовий колір */
     color: white; /* Колір тексту */
     padding: 10px;
 }
 
 .header {
-    position: absolute;
-    top: 0;
-    left: 2cm; /* Щоб не перекривати ліву панель */
-    width: calc(100% - 2cm); /* Ширина заголовка */
     background-color: #FF0000; /* Червоний колір */
     color: white; /* Колір тексту */
     text-align: center;
     padding: 10px 0;
+    width: calc(100% - 2cm); /* Ширина заголовка */
 }
 
 .main-content {
-    margin-top: 60px; /* Відстань, щоб не перекривати заголовок */
-    margin-left: 2cm; /* Відстань, щоб не перекривати ліву панель */
     padding: 20px;
+    flex: 1; /* Займає залишкову ширину */
 }
 
 .grid-container {
