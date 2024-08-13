@@ -30,13 +30,25 @@ header {
 }
 
 .nav-menu {
-    display: none; /* Сховати меню за замовчуванням */
-    list-style-type: none;
-    padding: 0;
+    position: absolute;
+    top: 50px; /* Відстань від верху */
+    left: -200px; /* Сховати меню зліва */
+    width: 200px;
+    background-color: #0D015F; /* Колір фону меню */
+    padding: 10px;
+    transition: left 0.3s ease; /* Анімація */
+    border-radius: 5px; /* Закруглення кутів */
+    z-index: 1; /* Щоб меню було поверх інших елементів */
 }
 
 .nav-menu.show {
-    display: block; /* Показати меню при активації */
+    left: 0; /* Показати меню */
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-menu li {
@@ -47,7 +59,7 @@ header {
     color: white;
     text-decoration: none;
     padding: 10px;
-    display: inline-block;
+    display: block; /* Для полегшення натискання */
     transition: all 0.3s ease; /* Анімація */
 }
 
@@ -71,7 +83,7 @@ footer {
     background-color: #f1f1f1;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
