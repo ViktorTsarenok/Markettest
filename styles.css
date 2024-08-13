@@ -1,89 +1,54 @@
+* {
+    box-sizing: border-box; /* Включити вирівнювання елементів */
+}
+
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0D015F; /* Фон */
-    color: white; /* Колір тексту */
+    background-color: #f1f1f1; /* Загальний фон сторінки */
 }
 
-header {
-    text-align: center;
-    position: relative;
-}
-
-.site-title {
-    background-color: #6A08BA; /* Колір фону заголовка */
-    display: inline-block;
-    padding: 15px;
-    border-radius: 10px; /* Випуклість */
-    margin: 20px 0;
-}
-
-.menu-toggle {
-    background-color: #6A08BA; /* Колір кнопки */
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 15px;
-}
-
-.nav-menu {
+.left-panel {
     position: absolute;
-    top: 50px; /* Відстань від верху */
-    left: -200px; /* Сховати меню зліва */
-    width: 200px;
-    background-color: #0D015F; /* Колір фону меню */
+    top: 0;
+    left: 0;
+    width: 2cm; /* Ширина лівої панелі */
+    height: 100%; /* Висота 100% */
+    background-color: #6A08BA; /* Фіолетовий колір */
+    color: white; /* Колір тексту */
     padding: 10px;
-    transition: left 0.3s ease; /* Анімація */
-    border-radius: 5px; /* Закруглення кутів */
-    z-index: 1; /* Щоб меню було поверх інших елементів */
 }
 
-.nav-menu.show {
-    left: 0; /* Показати меню */
+.header {
+    position: absolute;
+    top: 0;
+    left: 2cm; /* Щоб не перекривати ліву панель */
+    width: calc(100% - 2cm); /* Ширина заголовка */
+    background-color: #FF0000; /* Червоний колір */
+    color: white; /* Колір тексту */
+    text-align: center;
+    padding: 10px 0;
 }
 
-.nav-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-menu li {
-    margin: 10px 0;
-}
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: block; /* Для полегшення натискання */
-    transition: all 0.3s ease; /* Анімація */
-}
-
-.nav-menu a:hover {
-    background-color: #79638B; /* Підсвічування */
-    transform: scale(1.05); /* Збільшення при наведенні */
-    border-radius: 5px; /* Закруглення кутів */
-}
-
-main {
+.main-content {
+    margin-top: 60px; /* Відстань, щоб не перекривати заголовок */
+    margin-left: 2cm; /* Відстань, щоб не перекривати ліву панель */
     padding: 20px;
 }
 
-.product {
-    border: 1px solid #ccc;
-    margin: 10px 0;
-    padding: 10px;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 стовпці */
+    gap: 10px; /* Проміжок між слотами */
 }
 
-footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.slot {
+    background-color: #ffffff; /* Білий фон для слотів */
+    border: 1px solid #ccc; /* Сірий контур */
+    height: 100px; /* Висота слотів */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; /* Жирний шрифт для тексту */
+    color: #333; /* Темно-сірий колір тексту */
 }
